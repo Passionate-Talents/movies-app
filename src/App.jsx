@@ -1,9 +1,10 @@
 import "./App.css";
+import Header from "./Componnets/header/Header";
 
 function App() {
   return (
     <div className="App">
-      <h1> Movies App </h1>
+      <Header />
     </div>
   );
 }
