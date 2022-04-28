@@ -1,0 +1,28 @@
+.footer {
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
+    position: fixed;
+    background-color: #2d313a;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+
+.cta {
+    flex: 1;
+    padding: 6px 12px 8px;
+    min-width: 80px;
+    max-width: 168px;
+    color: white;
+    background-color: #2d313a;
+    border: none;
+    font-size: 0.875rem;
+    cursor: pointer;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.box {
+    display: grid;
+}

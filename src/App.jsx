@@ -1,9 +1,10 @@
 import "./App.css";
+import { Footer } from "./footer/footer";
 
 function App() {
   return (
     <div className="App">
-      <h1> Movies App </h1>
+      <Footer/>
     </div>
   );
 }
