@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.085faf8c.css",
+    "main.js": "/static/js/main.966ecec6.js",
+    "static/media/Clapperboard .svg": "/static/media/Clapperboard .a521fb236b70d9bb61e5029cb29ae763.svg",
+    "static/media/Filmprojector.svg": "/static/media/Filmprojector.9451a8a2423a788bbd40ca223cd918e3.svg",
+    "index.html": "/index.html",
+    "main.085faf8c.css.map": "/static/css/main.085faf8c.css.map",
+    "main.966ecec6.js.map": "/static/js/main.966ecec6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.085faf8c.css",
+    "static/js/main.966ecec6.js"
+  ]
+}
