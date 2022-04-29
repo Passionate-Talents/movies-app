@@ -1,44 +1,18 @@
 import React from "react";
 import "./style.css";
-import { IoSearchOutline } from "react-icons/io";
-import { FaHotjar } from "react-icons/fa";
-import { MdMovie } from "react-icons/md";
-import { MdOutlineCropLandscape } from "react-icons/md";
+import { FiSearch } from "react-icons/fi";
+import { MdOutlineMovie } from "react-icons/md";
+import { CgScreen } from "react-icons/cg";
+import { MdLocalFireDepartment } from "react-icons/md";
+import { Button } from "./button";
+
 export const Footer = () => {
   return (
     <div className="footer">
-      <button className="cta">
-        <div className="box">
-          <span>
-            <FaHotjar />
-          </span>
-          <span>Trending</span>
-        </div>
-      </button>
-      <button className="cta">
-        <div className="box">
-          <span>
-            <MdMovie />
-          </span>
-          <span>Movies</span>
-        </div>
-      </button>
-      <button className="cta">
-        <div className="box">
-          <span>
-            <MdOutlineCropLandscape />
-          </span>
-          <span>TV Series</span>
-        </div>
-      </button>
-      <button className="cta">
-        <div className="box">
-          <span>
-            <IoSearchOutline />
-          </span>
-          <span>Search</span>
-        </div>
-      </button>
+      <Button name={"Trending"}icon={<MdLocalFireDepartment fontSize={20} />}/>
+      <Button name={"Movies"} icon={<MdOutlineMovie fontSize={20} />} />
+      <Button name={"TV Series"} icon={<CgScreen fontSize={20} />} />
+      <Button name={"FiSearch"} icon={<FiSearch fontSize={20} />} />
     </div>
   );
 };
