@@ -13,14 +13,13 @@
 .cta {
     flex: 1;
     padding: 6px 12px 8px;
-    min-width: 80px;
     max-width: 168px;
     color: white;
     background-color: #2d313a;
     border: none;
-    font-size: 0.875rem;
+    font-size: 13px;
     cursor: pointer;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Roboto";
 }
 
 .box {
