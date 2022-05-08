@@ -7,3 +7,15 @@ body {
     background-color: #39445a;
     font-family: "Montserrat", sans-serif;
 }
+
+.container {
+    padding-top: 140px;
+    color: #fff;
+    text-align: center;
+}
+
+.page-title {
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 28px;
+}

@@ -8,7 +8,7 @@ function App() {
     <div className="app">
       <Header />
       <Routes>
-        <Route path="/" element={<Trending />} />
+        <Route path="/movies-app" element={<Trending />} />
       </Routes>
     </div>
   );
