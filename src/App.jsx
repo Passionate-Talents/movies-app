@@ -1,9 +1,15 @@
 import "./App.css";
+import { Header } from "./Componnets/header/Header";
+import { Trending } from "./pages/trending/Trending";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h1> Movies App </h1>
+    <div className="app">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Trending />} />
+      </Routes>
     </div>
   );
 }
