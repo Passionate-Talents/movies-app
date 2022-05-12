@@ -24,24 +24,14 @@ export const Trending = () => {
           vote_average="7"
           media_type="movie"
         />
+        <MovieCard name="Spider Man" vote_average="7" media_type="movie" />
         <MovieCard
           poster_path="/wRnbWt44nKjsFPrqSmwYki5vZtF.jpg"
           name="Spider Man"
           vote_average="7"
           media_type="movie"
         />
-        <MovieCard
-          poster_path="/wRnbWt44nKjsFPrqSmwYki5vZtF.jpg"
-          name="Spider Man"
-          vote_average="7"
-          media_type="movie"
-        />
-        <MovieCard
-          poster_path="/wRnbWt44nKjsFPrqSmwYki5vZtF.jpg"
-          name="Spider Man"
-          vote_average="7"
-          media_type="movie"
-        />
+        <MovieCard name="Spider Man" vote_average="7" media_type="movie" />
         <MovieCard
           poster_path="/wRnbWt44nKjsFPrqSmwYki5vZtF.jpg"
           name="Spider Man"
