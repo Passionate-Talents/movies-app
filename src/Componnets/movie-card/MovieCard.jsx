@@ -4,7 +4,7 @@ import "./MovieCard.css";
 
 export const MovieCard = ({
   name,
-  poster_path,
+  posterPath,
   title,
   vote_average,
   media_type,
@@ -13,7 +13,7 @@ export const MovieCard = ({
   return (
     <div className="movie-card">
       <span className="rate">{vote_average}</span>
-      <Poster name={name} poster_path={poster_path} />
+      <Poster name={name} src={posterPath} />
       <h2 className="movie-title">{title ?? name}</h2>
       <div className="movie-footer">
         <h3 className="movie-type">{media_type}</h3>
