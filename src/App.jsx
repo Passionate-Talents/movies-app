@@ -1,12 +1,17 @@
 import "./App.css";
+import { Header } from "./Componnets/header/Header";
+import { Trending } from "./pages/trending/Trending";
+import { Routes, Route } from "react-router-dom";
 import { Footer } from "./footer/footer";
-import { Trending } from "./trending";
 
 function App() {
   return (
-    <div className="App">
-      <Footer/>
-      <Trending/>
+    <div className="app">
+      <Header />
+      <Routes>
+        <Route path="/movies-app" element={<Trending />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
