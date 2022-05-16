@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     position: fixed;
+    gap: 100px;
 }
 
 .cta {
@@ -20,6 +21,48 @@
     font-size: 13px;
     cursor: pointer;
     font-family: "Roboto";
+}
+
+.ctaClick {
+    position: relative;
+    border: none;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 1;
+    padding: 6px 12px 8px;
+    max-width: 168px;
+    background-color: #2d313a;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: "Roboto";
+}
+
+.ctaClick:after {
+    content: "";
+    background: #FFFFFF;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.ctaClick:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
 
 .box {

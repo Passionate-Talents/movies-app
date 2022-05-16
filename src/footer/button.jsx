@@ -1,9 +1,14 @@
-import React from "react";
-import "./style.css";
+import React, { useState } from "react";
 
-export const Button = ({ icon , name }) => {
+import "./style.css";
+export const Button = ({ icon, name }) => {
+ const [changeBck,setChangeBck]=useState()
+  function handelclick() {
+    setChangeBck(true)
+  }
+  console.log(changeBck)
   return (
-    <button className="cta">
+    <button className={ !changeBck ? "cta":"ctaClick"} onClick={handelclick}>
       <div className="box">
         <span>{icon}</span>
         <span>{name}</span>
