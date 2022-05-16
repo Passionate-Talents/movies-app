@@ -4,7 +4,7 @@ import "./MovieCard.css";
 
 export const MovieCard = ({
   name,
-  posterPath,
+  poster_path: posterPath,
   title,
   vote_average,
   media_type,
