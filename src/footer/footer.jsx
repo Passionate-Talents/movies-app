@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import "./style.css";
 import { FiSearch } from "react-icons/fi";
 import { MdOutlineMovie } from "react-icons/md";
@@ -6,14 +5,14 @@ import { CgScreen } from "react-icons/cg";
 import { MdLocalFireDepartment } from "react-icons/md";
 import { Button } from "./button";
 import { Link } from "react-router-dom";
-export const Footer = () => {
 
+export const Footer = () => {
   return (
     <div className="footer">
       <Link to="/">
         <Button
           name="Trending"
-          icon={<MdLocalFireDepartment fontSize={20}  />}
+          icon={<MdLocalFireDepartment fontSize={20} />}
         />
       </Link>
       <Link to="/movies">

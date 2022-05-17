@@ -8,7 +8,6 @@ export const Trending = () => {
       })
   };
   const { data, isLoading, isError } = useFetchData();
-  console.log(data);
   return (
     <div>
       <div className="trending">

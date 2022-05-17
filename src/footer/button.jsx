@@ -1,14 +1,18 @@
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
 import "./style.css";
+
 export const Button = ({ icon, name }) => {
- const [changeBck,setChangeBck]=useState()
+  const [changeBack, setChangeBack] = useState();
+
+  const [boolean, setBoolean] = useState();
   function handelclick() {
-    setChangeBck(true)
+    setChangeBack(true);
   }
-  console.log(changeBck)
+  useEffect(() => {
+    setBoolean(true);
+  }, [changeBack]);
   return (
-    <button className={ !changeBck ? "cta":"ctaClick"} onClick={handelclick}>
+    <button className={!boolean ? "cta" : "cta-click"} onClick={handelclick}>
       <div className="box">
         <span>{icon}</span>
         <span>{name}</span>

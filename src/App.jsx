@@ -10,7 +10,7 @@ function App() {
     <div className="app">
       <Header />
       <Routes>
-        <Route exact path="/" element={<Trending />} />
+        <Route path="/" element={<Trending />} />
         <Route path="/movies" element={<Movies />} />
       </Routes>
       <Footer />

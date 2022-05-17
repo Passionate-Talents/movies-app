@@ -8,12 +8,12 @@
     display: flex;
     justify-content: center;
     position: fixed;
-    gap: 100px;
+    gap: 30px;
 }
 
 .cta {
     flex: 1;
-    padding: 6px 12px 8px;
+    padding: 6px 40px 8px;
     max-width: 168px;
     color: white;
     background-color: #2d313a;
@@ -23,10 +23,10 @@
     font-family: "Roboto";
 }
 
-.ctaClick {
+.cta-click {
     position: relative;
     border: none;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 20px;
     width: 200px;
     text-align: center;
@@ -45,24 +45,22 @@
     font-family: "Roboto";
 }
 
-.ctaClick:after {
+.cta-click:after {
     content: "";
-    background: #FFFFFF;
+    background: #ffffff;
     display: block;
     position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px!important;
-    margin-top: -120%;
+    padding: 300% 350%;
+    margin: -120% -20px;
     opacity: 0;
-    transition: all 0.8s
+    transition: all 0.8s;
 }
 
-.ctaClick:active:after {
+.cta-click:active:after {
     padding: 0;
     margin: 0;
     opacity: 1;
-    transition: 0s
+    transition: 0s;
 }
 
 .box {
