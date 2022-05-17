@@ -1,6 +1,8 @@
-* {
+*,
+li {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 body {
@@ -9,7 +11,7 @@ body {
 }
 
 .container {
-    padding-top: 140px;
+    padding: 140px 0 70px;
     color: #fff;
     text-align: center;
 }
@@ -23,6 +25,39 @@ body {
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 35px;
+    padding: 35px 35px 15px;
     justify-content: space-evenly;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+.page-link {
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.page-link-active {
+    background-color: #3f51b5;
+}
+
+.page-link:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.page-link-active:hover {
+    background-color: rgba(63, 81, 181, .6);
+}
+
+.break-label {
+    padding: 5px 10px;
+    margin-right: 10px;
 }

@@ -4,20 +4,24 @@ import "./MovieCard.css";
 
 export const MovieCard = ({
   name,
-  poster_path: posterPath,
+  posterPath,
   title,
-  vote_average,
-  media_type,
-  release_date,
+  voteAverage,
+  mediaType,
+  releaseDate,
 }) => {
   return (
     <div className="movie-card">
-      <span className="rate">{vote_average}</span>
+      <span
+        className={`rate ${voteAverage < 6 ? "low-rating" : "high-rating"}`}
+      >
+        {voteAverage ?? 5}
+      </span>
       <Poster name={name} src={posterPath} />
       <h2 className="movie-title">{title ?? name}</h2>
       <div className="movie-footer">
-        <h3 className="movie-type">{media_type}</h3>
-        <h3 className="movie-date">{release_date ?? "2022 - 6 - 2"}</h3>
+        <h3 className="movie-type">{mediaType}</h3>
+        <h3 className="movie-date">{releaseDate ?? "2022 - 6 - 2"}</h3>
       </div>
     </div>
   );
