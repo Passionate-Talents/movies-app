@@ -1,11 +1,12 @@
 import { useQuery } from "react-query";
 
 export const Trending = () => {
-
-  const useFetchData =  () => {
-      return useQuery("data",()=>{
-          return fetch(`https://jsonplaceholder.typicode.com/todos`).then((res)=>res.json());
-      })
+  const useFetchData = () => {
+    return useQuery("data", () => {
+      return fetch(`https://jsonplaceholder.typicode.com/todos`).then((res) =>
+        res.json()
+      );
+    });
   };
   const { data, isLoading, isError } = useFetchData();
   return (
