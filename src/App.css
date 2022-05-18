@@ -26,3 +26,10 @@ body {
     padding: 35px;
     justify-content: space-evenly;
 }
+
+.button-container {
+    display: flex;
+    gap: 9px;
+    padding: 10px 50px;
+    flex-wrap: wrap;
+}

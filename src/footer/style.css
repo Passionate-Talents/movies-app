@@ -28,15 +28,9 @@
     border: none;
     color: #ffffff;
     padding: 20px;
-    width: 200px;
     text-align: center;
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
     flex: 1;
-    padding: 6px 12px 8px;
-    max-width: 168px;
+    padding: 6px 49px 8px;
     background-color: #2d313a;
     border: none;
     font-size: 13px;

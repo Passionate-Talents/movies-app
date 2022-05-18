@@ -1,0 +1,33 @@
+.cta {
+    display: flex;
+    color: rgba(0, 0, 0, 0.87);
+    border: none;
+    cursor: pointer;
+    height: 25px;
+    border-radius: 16px;
+    background-color: #e0e0e0;
+    padding: 0 10px;
+    align-items: center;
+    gap: 4px;
+}
+
+.hide-delete {
+    display: none;
+}
+
+.delete {
+    display: flex;
+}
+
+.cta-when-click {
+    display: flex;
+    color: rgba(255, 255, 255, 0.87);
+    border: none;
+    cursor: pointer;
+    height: 25px;
+    border-radius: 16px;
+    background-color: #3f51b5;
+    padding: 0 10px;
+    align-items: center;
+    gap: 4px;
+}
