@@ -13,7 +13,7 @@ export const Button = () => {
     }, [changeBack]);
   return (
     <div>
-      <button className={!check ? "cta" : "cta-when-click"} onClick={handelClickDelete}>name <div className={!check ? "hide-delete":"delete" }><TiDelete color="rgb(201, 203, 203)" size="20px"/></div></button>
+      <button className={!check ? "cta" : "cta-when-click"} onClick={handelClickDelete}>name <div className={!check ? "hide-delete":"delete" }><TiDelete  className="icon-delete" /></div></button>
     </div>
   );
 };

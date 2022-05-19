@@ -19,6 +19,10 @@
     display: flex;
 }
 
+.delete:hover {
+    display: flex;
+}
+
 .cta-when-click {
     display: flex;
     color: rgba(255, 255, 255, 0.87);
@@ -30,4 +34,17 @@
     padding: 0 10px;
     align-items: center;
     gap: 4px;
+}
+
+.cta-when-click:hover {
+    background-color: rgba(96, 109, 255, 0.87);
+}
+
+.icon-delete {
+    color: rgb(201, 203, 203);
+    font-size: 20px;
+}
+
+.icon-delete:hover {
+    color: rgb(255, 255, 255);
 }
