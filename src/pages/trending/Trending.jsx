@@ -1,28 +1,25 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useQuery } from "react-query";
 import { MovieCard } from "../../Componnets/movie-card/MovieCard";
 import { fetchTrendingMovies } from "../../util/fetch-trending-movies";
-import ReactPaginate from "react-paginate";
+import { Pagination } from "../../Componnets/pagination/pagination";
 
 export const Trending = () => {
-  const [countPage, setCountPage] = useState(0);
-  const [page, setPage] = useState(1);
+  const [currentPage, setPage] = useState(1);
 
   const {
     data: trendingMovies,
     isLoading,
     isError,
-  } = useQuery(["trending-movies", page], fetchTrendingMovies, {
+  } = useQuery(["trending-movies", currentPage], fetchTrendingMovies, {
     keepPreviousData: true,
   });
 
-  useEffect(() => {
-    setCountPage(trendingMovies?.total_pages);
-  }, [trendingMovies]);
+  const countPage = trendingMovies?.total_pages;
 
-  const handlePageClick = (event) => {
-    setPage(event.selected + 1);
+  const handlePageClick = (page) => {
+    setPage(page);
 
     window.scrollTo({
       top: 0,
@@ -50,20 +47,11 @@ export const Trending = () => {
           />
         ))}
       </div>
-      <ReactPaginate
-        breakLabel={"..."}
-        pageCount={countPage}
+      <Pagination
+        currentPage={currentPage}
+        handlePageClick={handlePageClick}
+        countPage={countPage}
         marginPagesDisplayed={2}
-        pageRangeDisplayed={2}
-        onPageChange={handlePageClick}
-        containerClassName={"pagination"}
-        subContainerClassName={"pages"}
-        forcePage={page - 1}
-        previousClassName={"hide"}
-        breakLinkClassName={"break-label"}
-        nextClassName={"hide"}
-        activeLinkClassName={"page-link-active"}
-        pageLinkClassName={"page-link"}
       />
     </div>
   );

@@ -6,7 +6,7 @@ export const MovieCard = ({
   name,
   posterPath,
   title,
-  voteAverage,
+  voteAverage = 5,
   mediaType,
   releaseDate,
 }) => {
@@ -15,7 +15,7 @@ export const MovieCard = ({
       <span
         className={`rate ${voteAverage < 6 ? "low-rating" : "high-rating"}`}
       >
-        {voteAverage ?? 5}
+        {voteAverage}
       </span>
       <Poster name={name} src={posterPath} />
       <h2 className="movie-title">{title ?? name}</h2>
