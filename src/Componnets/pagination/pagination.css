@@ -15,9 +15,9 @@
 }
 
 .page:hover {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: #00000033;
 }
 
 .page-active:hover {
-    background-color: rgba(63, 81, 181, .6);
+    background-color: #3f51b599;
 }

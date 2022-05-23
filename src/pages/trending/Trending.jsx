@@ -1,22 +1,18 @@
-import React from "react";
-import { useState } from "react";
-import { useQuery } from "react-query";
+import React, { useState } from "react";
+
 import { MovieCard } from "../../Componnets/movie-card/MovieCard";
-import { fetchTrendingMovies } from "../../util/fetch-trending-movies";
+import { useTrendingApi } from "../../api/api-trending";
 import { Pagination } from "../../Componnets/pagination/pagination";
 
 export const Trending = () => {
   const [currentPage, setPage] = useState(1);
 
-  const {
-    data: trendingMovies,
-    isLoading,
-    isError,
-  } = useQuery(["trending-movies", currentPage], fetchTrendingMovies, {
-    keepPreviousData: true,
-  });
+  const { data, isLoading, isError } = useTrendingApi([
+    "trending-movies",
+    currentPage,
+  ]);
 
-  const countPage = trendingMovies?.total_pages;
+  const countPage = data?.data?.total_pages;
 
   const handlePageClick = (page) => {
     setPage(page);
@@ -35,7 +31,7 @@ export const Trending = () => {
     <div className="container">
       <h1 className="page-title">Trending Today</h1>
       <div className="cards-container">
-        {trendingMovies?.results?.map((movie) => (
+        {data?.data?.results.map((movie) => (
           <MovieCard
             key={movie.id}
             mediaType={movie.media_type}
