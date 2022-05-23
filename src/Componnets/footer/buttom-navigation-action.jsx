@@ -14,7 +14,10 @@ export const ButtomNavigationAction = ({ icon, name }) => {
   }, [changeValue]);
 
   return (
-    <button className={!rippleBackgroundStyle ? "cta-ripple" : "cta-click"} onClick={handelclick}>
+    <button
+      className={!rippleBackgroundStyle ? "cta-ripple" : "cta-click"}
+      onClick={handelclick}
+    >
       <div className="box">
         <span>{icon}</span>
         <span>{name}</span>

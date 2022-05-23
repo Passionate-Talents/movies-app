@@ -3,14 +3,14 @@ import { TiDelete } from "react-icons/ti";
 
 import "./style-button.css";
 
-export const ChipMultiUse = ({name}) => {
+export const ChipMultiUse = ({ name }) => {
   const [changeValue, setChangeValue] = useState(false);
   const [whenChangeValue, setWhenChangeValue] = useState(false);
 
   function handelClickDelete() {
     setChangeValue((prevCount) => !prevCount);
   }
-  
+
   useEffect(() => {
     setWhenChangeValue((prevCount) => !prevCount);
   }, [changeValue]);
