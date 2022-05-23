@@ -3,7 +3,7 @@
     bottom: 0;
     z-index: 100;
     position: fixed;
-    background-color: #2d313a;
+    background-color: rgb(45, 49, 58);
     height: 56px;
     display: flex;
     justify-content: center;
@@ -11,12 +11,11 @@
     gap: 30px;
 }
 
-.cta {
+.cta-ripple {
     flex: 1;
     padding: 6px 40px 8px;
-    max-width: 168px;
-    color: white;
-    background-color: #2d313a;
+    color: rgb(255, 255, 255);
+    background-color: rgb(45, 49, 58);
     border: none;
     font-size: 13px;
     cursor: pointer;
@@ -25,11 +24,11 @@
 .cta-click {
     position: relative;
     border: none;
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     padding: 20px;
     flex: 1;
     padding: 6px 49px 8px;
-    background-color: #2d313a;
+    background-color: rgb(45, 49, 58);
     border: none;
     font-size: 13px;
     cursor: pointer;
@@ -41,7 +40,7 @@
 
 .cta-click:after {
     content: "";
-    background: #ffffff;
+    background: rgb(255, 255, 255);
     display: block;
     position: absolute;
     padding: 300px 250px;
