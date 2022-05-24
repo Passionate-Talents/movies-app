@@ -1,0 +1,61 @@
+.footer {
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
+    position: fixed;
+    background-color: rgb(45, 49, 58);
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    gap: 30px;
+}
+
+.cta-ripple {
+    flex: 1;
+    padding: 6px 40px 8px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(45, 49, 58);
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.cta-click {
+    position: relative;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    flex: 1;
+    padding: 6px 49px 8px;
+    background-color: rgb(45, 49, 58);
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.cta-click:after {
+    content: "";
+    background: rgb(255, 255, 255);
+    display: block;
+    position: absolute;
+    padding: 300px 250px;
+    margin: -120px -200px;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.cta-click:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.box {
+    display: grid;
+}

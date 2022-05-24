@@ -4,13 +4,13 @@
 }
 
 body {
-    background-color: #39445a;
+    background-color: rgb(57, 68, 90);
     font-family: "Montserrat", sans-serif;
 }
 
 .container {
     padding-top: 140px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
@@ -25,4 +25,11 @@ body {
     flex-wrap: wrap;
     padding: 35px;
     justify-content: space-evenly;
+}
+
+.button-container {
+    display: flex;
+    gap: 6px;
+    padding: 10px 50px;
+    flex-wrap: wrap;
 }
