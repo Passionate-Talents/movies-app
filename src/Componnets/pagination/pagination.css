@@ -1,0 +1,23 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.page {
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.page-active {
+    background-color: #3f51b5;
+}
+
+.page:hover {
+    background-color: #00000033;
+}
+
+.page-active:hover {
+    background-color: #3f51b599;
+}

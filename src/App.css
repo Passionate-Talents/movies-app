@@ -1,16 +1,18 @@
-* {
+*,
+li {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 body {
-    background-color: rgb(57, 68, 90);
+    background-color: #39445a;
     font-family: "Montserrat", sans-serif;
 }
 
 .container {
-    padding-top: 140px;
-    color: rgb(255, 255, 255);
+    padding: 140px 0 70px;
+    color: #fff;
     text-align: center;
 }
 
@@ -23,7 +25,7 @@ body {
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 35px;
+    padding: 35px 35px 15px;
     justify-content: space-evenly;
 }
 
