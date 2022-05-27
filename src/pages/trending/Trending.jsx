@@ -7,10 +7,7 @@ import { Pagination } from "../../Componnets/pagination/pagination";
 export const Trending = () => {
   const [currentPage, setPage] = useState(1);
 
-  const { data, isLoading, isError } = useTrendingApi([
-    "trending-movies",
-    currentPage,
-  ]);
+  const { data, isLoading, isError } = useTrendingApi(currentPage);
 
   const countPage = data?.data?.total_pages;
 

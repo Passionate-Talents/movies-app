@@ -3,7 +3,8 @@ export const getPagesTodisplay = (
     marginPagesDisplayed,
     currentPage
 ) => {
-    const pagesList = [...Array(countPage + 1).keys()].slice(1);
+    const pagesList = Array.from({ length: countPage }, (_, index) => index + 1);
+
     return pagesList
         .filter((page) => {
             if (page === 1 || page === pagesList.length) return true;
