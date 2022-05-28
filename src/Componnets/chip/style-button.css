@@ -1,11 +1,11 @@
 .cta-animation {
     display: flex;
-    color: rgba(0, 0, 0, 0.87);
+    color: #000000de;
     border: none;
     cursor: pointer;
     height: 25px;
     border-radius: 16px;
-    background-color: rgb(224, 224, 224);
+    background-color: #e0e0e0;
     padding: 0 10px;
     align-items: center;
     gap: 4px;
@@ -25,26 +25,26 @@
 
 .cta-when-click {
     display: flex;
-    color: rgba(255, 255, 255, 0.87);
+    color: #FFFFFF;
     border: none;
     cursor: pointer;
     height: 25px;
     border-radius: 16px;
-    background-color: rgb(63, 81, 181);
+    background-color: #3F51B5;
     padding: 0 3px 0 8px;
     align-items: center;
     gap: 4px;
 }
 
 .cta-when-click:hover {
-    background-color: rgba(96, 109, 255, 0.87);
+    background-color: #5a68b6;
 }
 
 .icon-delete {
-    color: rgb(201, 203, 203);
+    color: #C9CBCB;
     font-size: 20px;
 }
 
 .icon-delete:hover {
-    color: rgb(255, 255, 255);
+    color: #FFFFFF;
 }

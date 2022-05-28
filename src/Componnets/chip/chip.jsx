@@ -3,7 +3,7 @@ import { TiDelete } from "react-icons/ti";
 
 import "./style-button.css";
 
-export const ChipMultiUse = ({ name }) => {
+export const Chip = ({ name }) => {
   const [changeValue, setChangeValue] = useState(false);
   const [whenChangeValue, setWhenChangeValue] = useState(false);
 
