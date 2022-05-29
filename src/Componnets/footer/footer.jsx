@@ -10,7 +10,7 @@ import "./style.css";
 export const Footer = () => {
   return (
     <div className="footer">
-      <Link to="/">
+      <Link to="/movies-app">
         <ButtomNavigationAction
           name="Trending"
           icon={<MdLocalFireDepartment fontSize={20} />}
