@@ -3,7 +3,7 @@ import { TiDelete } from "react-icons/ti";
 
 import "./style-button.css";
 
-export const Chip = ({ name }) => {
+export const Chip = ({ name,id }) => {
   const [changeValue, setChangeValue] = useState(false);
   const [whenChangeValue, setWhenChangeValue] = useState(false);
 
@@ -20,6 +20,7 @@ export const Chip = ({ name }) => {
       <button
         className={!whenChangeValue ? "cta-animation" : "cta-when-click"}
         onClick={handelClickDelete}
+        id={id}
       >
         {name}
         <div className={!whenChangeValue ? "hide-delete" : "delete"}>
