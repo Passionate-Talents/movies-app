@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./MovieCard.css";
 import { Poster } from "../poster/Poster";
+import { Modal } from "../../Componnets/modal/modal";
+import { MovieInfo } from "../../Componnets/movie-info/movie-info";
 
 export const MovieCard = ({
   name,
@@ -10,9 +12,26 @@ export const MovieCard = ({
   voteAverage,
   mediaType,
   releaseDate,
+  id,
 }) => {
+  const [isMovieInfoOpen, setIsMovieInfoOpen] = useState(false);
+
+  const handleOpenMovieInfo = () => {
+    setIsMovieInfoOpen(true);
+  };
+
+  const handleCloseMovieInfo = (event) => {
+    event.stopPropagation();
+    setIsMovieInfoOpen(false);
+  };
+
   return (
-    <div className="movie-card">
+    <div onClick={handleOpenMovieInfo} className="movie-card">
+      {isMovieInfoOpen && (
+        <Modal handleCloseMovieInfo={handleCloseMovieInfo}>
+          <MovieInfo id={id} mediaType={mediaType} />
+        </Modal>
+      )}
       {!!voteAverage && (
         <span
           className={`rate ${voteAverage < 6 ? "low-rating" : "high-rating"}`}
