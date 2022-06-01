@@ -3,15 +3,15 @@ import React, { useState } from "react";
 import { Chip } from "../../Componnets/chip/chip";
 import { MovieCard } from "../../Componnets/movie-card/MovieCard";
 import { useMoviesApi } from "../../api/api-movies";
-import { ChipApi } from "../../api/api-chip";
+import { useChipApi } from "../../api/api-chip";
 import { Pagination } from "../../Componnets/pagination/pagination";
 
 export const Movies = () => {
-  const [todos, setTodos] = useState();
+
   const [currentPage, setPage] = useState(1);
   const { data, isLoading, isError } = useMoviesApi(currentPage);
-
-  const countPage = data && data.total_pages;
+  const { data:dataChip } = useChipApi();
+  const countPage = data?.data?.total_pages;
 
   const handlePageClick = (page) => {
     setPage(page);
@@ -30,8 +30,8 @@ export const Movies = () => {
     <div className="container">
       <p className="page-title">DISCOVER MOVIES</p>
       <div className="button-container">
-        {todos &&
-          todos.map((geners) => (
+        {dataChip &&
+          dataChip.data.genres.map((geners) => (
             <Chip
               name={geners.name}
               id={geners.id}
@@ -58,7 +58,6 @@ export const Movies = () => {
         countPage={countPage}
         marginPagesDisplayed={2}
       />
-      <ChipApi setTodos={setTodos} />
     </div>
   );
 };
