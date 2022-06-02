@@ -34,7 +34,7 @@
 }
 
 .movie-info-description {
-    height: 40%;
+    height: 30%;
     overflow-y: scroll;
     padding: 15px;
     border-radius: 20px;
@@ -76,6 +76,18 @@
     margin-right: 5px;
 }
 
+.movie-info-carousel {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    overflow-y: hidden;
+    margin-bottom: 10px;
+}
+
+.movie-info-carousel::-webkit-scrollbar {
+    display: none;
+}
+
 @media (max-width:740px) {
     .movie-poster {
         max-width: 100%;
@@ -95,5 +107,8 @@
     }
     .movie-info-featurs {
         max-width: 100%;
+    }
+    .movie-info-title {
+        font-size: 24px;
     }
 }

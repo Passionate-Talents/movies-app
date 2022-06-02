@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 
-export const useMovieInfoApi = (mediaType, id) => {
+export const useMovieInfo = (mediaType, id) => {
     return useQuery(
         "movie-info",
         () => {

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 
-export const useMovieTrailerApi = (mediaType, id) => {
+export const useMovieTrailer = (mediaType, id) => {
     return useQuery(
         "movie-trailer",
         () => {
