@@ -7,10 +7,9 @@ import { useChipApi } from "../../api/api-chip";
 import { Pagination } from "../../Componnets/pagination/pagination";
 
 export const Movies = () => {
-
   const [currentPage, setPage] = useState(1);
   const { data, isLoading, isError } = useMoviesApi(currentPage);
-  const { data:dataChip } = useChipApi();
+  const { data :dataChip } = useChipApi();
   const countPage = data?.data?.total_pages;
 
   const handlePageClick = (page) => {
