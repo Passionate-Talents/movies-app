@@ -5,6 +5,7 @@ import { Header } from "./Componnets/header/Header";
 import { Trending } from "./pages/trending/Trending";
 import { Footer } from "./Componnets/footer/footer";
 import { Movies } from "./pages/movies/movies";
+import { Series } from "./pages/series/series";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/movies-app" element={<Trending />} />
         <Route path="/movies" element={<Movies />} />
+        <Route path="/series" element={<Series />} />
       </Routes>
       <Footer />
     </div>

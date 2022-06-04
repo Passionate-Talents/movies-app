@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 
 import { MovieCard } from "../../Componnets/movie-card/MovieCard";
-import { useTrendingApi } from "../../api/api-trending";
+import { useSeries } from "../../api/api-series";
 import { Pagination } from "../../Componnets/pagination/pagination";
 
-export const Trending = () => {
+export const Series = () => {
   const [currentPage, setPage] = useState(1);
 
-  const { data, isLoading, isError } = useTrendingApi(currentPage);
+  const { data, isLoading, isError } = useSeries(currentPage);
 
   const countPage = data?.total_pages;
 
-  const trendingMovies = data?.results;
+  const series = data?.results;
 
   const handlePageClick = (page) => {
     setPage(page);
@@ -35,12 +35,12 @@ export const Trending = () => {
 
   return (
     <div className="container">
-      <h1 className="page-title">Trending Today</h1>
+      <h1 className="page-title">discover series</h1>
       <div className="cards-container">
-        {trendingMovies?.map((movie) => (
+        {series?.map((movie) => (
           <MovieCard
             key={movie.id}
-            mediaType={movie.media_type}
+            mediaType="tv"
             releaseDate={movie.release_date}
             posterPath={movie.poster_path}
             voteAverage={movie.vote_average}

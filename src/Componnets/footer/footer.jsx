@@ -22,13 +22,13 @@ export const Footer = () => {
           icon={<MdOutlineMovie fontSize={20} />}
         />
       </Link>
-      <Link to="">
+      <Link to="series">
         <ButtomNavigationAction
           name="TV Series"
           icon={<CgScreen fontSize={20} />}
         />
       </Link>
-      <Link to="">
+      <Link to="search">
         <ButtomNavigationAction
           name="Search"
           icon={<FiSearch fontSize={20} />}

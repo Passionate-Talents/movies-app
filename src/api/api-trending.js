@@ -10,7 +10,7 @@ export const useTrendingApi = (currentPage) => {
             );
         }, {
             keepPreviousData: true,
-            select: (data) => data.data,
+            select: (response) => response.data,
         }
     );
 };
