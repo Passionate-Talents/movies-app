@@ -9,7 +9,7 @@ export const Trending = () => {
 
   const { data, isLoading, isError } = useTrendingApi(currentPage);
 
-  const countPage = data?.data?.total_pages;
+  const countPage = data?.total_pages;
 
   const handlePageClick = (page) => {
     setPage(page);
@@ -28,7 +28,7 @@ export const Trending = () => {
     <div className="container">
       <h1 className="page-title">Trending Today</h1>
       <div className="cards-container">
-        {data?.data?.results.map((movie) => (
+        {data?.results.map((movie) => (
           <MovieCard
             key={movie.id}
             mediaType={movie.media_type}
@@ -37,6 +37,7 @@ export const Trending = () => {
             voteAverage={movie.vote_average}
             name={movie.name}
             title={movie.title}
+            id={movie.id}
           />
         ))}
       </div>

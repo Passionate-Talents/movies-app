@@ -5,6 +5,7 @@ import { Header } from "./Componnets/header/Header";
 import { Trending } from "./pages/trending/Trending";
 import { Footer } from "./Componnets/footer/footer";
 import { Movies } from "./pages/movies/movies";
+
 function App() {
   return (
     <div className="app">

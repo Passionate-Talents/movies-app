@@ -1,0 +1,114 @@
+.movie-info {
+    border-radius: 10px;
+    background-color: #39445a;
+    padding: 30px 10px;
+    max-width: 85%;
+    border: 1px solid;
+}
+
+.movie-poster {
+    max-width: 38%;
+}
+
+.movie-info-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.movie-info-featurs {
+    max-width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-info-title {
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.movie-info-subtitle {
+    margin-bottom: 10px;
+}
+
+.movie-info-description {
+    height: 30%;
+    overflow-y: scroll;
+    padding: 15px;
+    border-radius: 20px;
+    scrollbar-width: thin;
+    box-shadow: inset 0 0 5px #000;
+    text-align: justify;
+}
+
+.movie-info-description::-webkit-scrollbar {
+    display: none;
+}
+
+.watch-trailer {
+    color: #fff;
+    background-color: #f50057;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    font-size: 16px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    border-radius: 4px;
+    letter-spacing: .5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.watch-trailer:hover {
+    background-color: #c51162;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+
+.youtube-icon {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.movie-info-carousel {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    overflow-y: hidden;
+    margin-bottom: 10px;
+}
+
+.movie-info-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width:740px) {
+    .movie-poster {
+        max-width: 100%;
+    }
+    .movie-info {
+        max-height: 80%;
+        max-width: 70%;
+        overflow: scroll;
+    }
+    .movie-info::-webkit-scrollbar {
+        display: none;
+    }
+    .movie-info-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .movie-info-featurs {
+        max-width: 100%;
+    }
+    .movie-info-title {
+        font-size: 24px;
+    }
+}
