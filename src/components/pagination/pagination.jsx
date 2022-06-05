@@ -1,7 +1,7 @@
 import React from "react";
 
+import { getPagesToDisplay } from "../../util/pagination";
 import "./pagination.css";
-import { getPagesTodisplay } from "../../util/pagination";
 
 export const Pagination = ({
   countPage,
@@ -9,7 +9,7 @@ export const Pagination = ({
   handlePageClick,
   currentPage,
 }) => {
-  const pagesTodisplay = getPagesTodisplay(
+  const pagesToDisplay = getPagesToDisplay(
     countPage,
     marginPagesDisplayed,
     currentPage
@@ -17,7 +17,7 @@ export const Pagination = ({
 
   return (
     <ul className="pagination">
-      {pagesTodisplay.map((page, index) => (
+      {pagesToDisplay.map((page, index) => (
         <li
           key={index}
           onClick={!isNaN(page) ? () => handlePageClick(page) : null}

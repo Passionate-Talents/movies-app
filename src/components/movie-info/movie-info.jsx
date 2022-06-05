@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { AiFillYoutube } from "react-icons/ai";
 
-import "./movie-info.css";
-import { useMovieInfo } from "../../api/api-movie-info";
-import { useMovieTrailer } from "../../api/api-movie-trailer";
-import { useActorsImages } from "../../api/api-actors-images";
+import { useMovieInfo } from "../../hooks/use-movie-info";
+import { useMovieTrailer } from "../../hooks/use-movie-trailer";
+import { useActorsImages } from "../../hooks/use-actors-images";
 import { Actor } from "../actor/actor";
+import "./movie-info.css";
 
 export const MovieInfo = ({ id, mediaType }) => {
   const { data: movieInfo } = useMovieInfo(mediaType, id);
@@ -47,7 +47,7 @@ export const MovieInfo = ({ id, mediaType }) => {
           src={windowWidth < 740 ? BACK_DROP : POSTER__URL}
           alt="movie-poster"
         />
-        <div className="movie-info-featurs">
+        <div className="movie-info-features">
           <h3 className="movie-info-title">
             {movieInfo?.title ?? movieInfo?.name}
           </h3>
@@ -65,7 +65,7 @@ export const MovieInfo = ({ id, mediaType }) => {
             rel="noreferrer noopener"
           >
             <AiFillYoutube className="youtube-icon" />
-            Watch the Trailler
+            Watch the Trailer
           </a>
         </div>
       </div>

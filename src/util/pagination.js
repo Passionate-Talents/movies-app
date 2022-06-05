@@ -1,4 +1,4 @@
-export const getPagesTodisplay = (
+export const getPagesToDisplay = (
     countPage,
     marginPagesDisplayed,
     currentPage

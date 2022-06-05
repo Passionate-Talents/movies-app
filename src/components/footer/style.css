@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     bottom: 0;
-    z-index: 100;
+    z-index: 2;
     position: fixed;
     background-color: #2d313a;
     height: 56px;
