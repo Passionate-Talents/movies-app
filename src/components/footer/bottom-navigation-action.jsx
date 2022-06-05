@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
+
 import "./style.css";
 
-export const ButtomNavigationAction = ({ icon, name }) => {
+export const BottomNavigationAction = ({ icon, name }) => {
   const [rippleBackgroundStyle, setRippleBackgroundStyle] = useState();
-  const [changeValue, setchangeValue] = useState();
+  const [changeValue, setChangeValue] = useState();
 
-  function handelclick() {
-    setchangeValue(true);
+  function handelClick() {
+    setChangeValue(true);
   }
 
   useEffect(() => {
@@ -16,7 +17,7 @@ export const ButtomNavigationAction = ({ icon, name }) => {
   return (
     <button
       className={!rippleBackgroundStyle ? "cta-ripple" : "cta-click"}
-      onClick={handelclick}
+      onClick={handelClick}
     >
       <div className="box">
         <span>{icon}</span>

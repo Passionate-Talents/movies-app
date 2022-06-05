@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { TiDelete } from "react-icons/ti";
 
-import "./style-button.css";
+import "./styles.css";
 
 export const Chip = ({ name, id }) => {
   const [changeValue, setChangeValue] = useState(false);

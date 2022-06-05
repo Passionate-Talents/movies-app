@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 
 import { Chip } from "../../components/chip/chip";
 import { MovieCard } from "../../components/movie-card/movie-card";
-import { useMoviesApi } from "../../hooks/use-movies";
-import { useChipApi } from "../../hooks/use-movie-genre";
+import { useMovies } from "../../hooks/use-movies";
+import { useMovieGenres } from "../../hooks/use-movie-genre";
 import { Pagination } from "../../components/pagination/pagination";
 import { scrollToTop } from "../../util/scroll";
 
 export const Movies = () => {
   const [currentPage, setPage] = useState(1);
-  const { data, isLoading } = useMoviesApi(currentPage);
-  const { data: dataChip } = useChipApi();
+  const { data, isLoading } = useMovies(currentPage);
+  const { data: dataChip } = useMovieGenres();
   const countPage = data?.data?.total_pages;
 
   const handlePageClick = (page) => {

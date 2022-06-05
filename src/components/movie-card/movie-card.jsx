@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import "./MovieCard.css";
 import { Poster } from "../poster/poster";
 import { Modal } from "../modal/modal";
 import { MovieInfo } from "../movie-info/movie-info";
+import "./movie-card.css";
 
 export const MovieCard = ({
   name,
