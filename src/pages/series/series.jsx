@@ -1,32 +1,24 @@
 import React, { useEffect, useState } from "react";
 
-import { MovieCard } from "../../Componnets/movie-card/MovieCard";
-import { useSeries } from "../../api/api-series";
-import { Pagination } from "../../Componnets/pagination/pagination";
+import { MovieCard } from "../../components/movie-card/movie-card";
+import { useSeries } from "../../hooks/use-series";
+import { Pagination } from "../../components/pagination/pagination";
+import { scrollToTop } from "../../util/scroll";
 
 export const Series = () => {
   const [currentPage, setPage] = useState(1);
-
-  const { data, isLoading, isError } = useSeries(currentPage);
+  const { data, isLoading } = useSeries(currentPage);
 
   const countPage = data?.total_pages;
-
   const series = data?.results;
 
   const handlePageClick = (page) => {
     setPage(page);
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    scrollToTop();
   };
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    scrollToTop();
   }, []);
 
   if (isLoading) {

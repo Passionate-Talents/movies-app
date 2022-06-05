@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { AiFillYoutube } from "react-icons/ai";
 
 import "./movie-info.css";
-import { useMovieInfo } from "../../api/api-movie-info";
-import { useMovieTrailer } from "../../api/api-movie-trailer";
-import { useActorsImages } from "../../api/api-actors-images";
+import { useMovieInfo } from "../../hooks/use-movie-info";
+import { useMovieTrailer } from "../../hooks/use-movie-trailer";
+import { useActorsImages } from "../../hooks/use-actors-images";
 import { Actor } from "../actor/actor";
 
 export const MovieInfo = ({ id, mediaType }) => {

@@ -1,25 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-import { Chip } from "../../Componnets/chip/chip";
-import { MovieCard } from "../../Componnets/movie-card/MovieCard";
-import { useMoviesApi } from "../../api/api-movies";
-import { useChipApi } from "../../api/api-chip";
-import { Pagination } from "../../Componnets/pagination/pagination";
+import { Chip } from "../../components/chip/chip";
+import { MovieCard } from "../../components/movie-card/movie-card";
+import { useMoviesApi } from "../../hooks/use-movies";
+import { useChipApi } from "../../hooks/use-movie-genre";
+import { Pagination } from "../../components/pagination/pagination";
+import { scrollToTop } from "../../util/scroll";
 
 export const Movies = () => {
   const [currentPage, setPage] = useState(1);
-  const { data, isLoading, isError } = useMoviesApi(currentPage);
-  const { data :dataChip } = useChipApi();
+  const { data, isLoading } = useMoviesApi(currentPage);
+  const { data: dataChip } = useChipApi();
   const countPage = data?.data?.total_pages;
 
   const handlePageClick = (page) => {
     setPage(page);
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    scrollToTop();
   };
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   if (isLoading) {
     return <h1 className="container">loading....</h1>;
@@ -31,10 +32,7 @@ export const Movies = () => {
       <div className="button-container">
         {dataChip &&
           dataChip.data.genres.map((geners) => (
-            <Chip
-              name={geners.name}
-              id={geners.id}
-            />
+            <Chip name={geners.name} id={geners.id} />
           ))}
       </div>
       <div className="cards-container">

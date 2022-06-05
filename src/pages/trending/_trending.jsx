@@ -1,32 +1,24 @@
 import React, { useEffect, useState } from "react";
 
-import { MovieCard } from "../../Componnets/movie-card/MovieCard";
-import { useTrendingApi } from "../../api/api-trending";
-import { Pagination } from "../../Componnets/pagination/pagination";
+import { MovieCard } from "../../components/movie-card/movie-card";
+import { compuseTrending } from "../../hooks/use-trending";
+import { Pagination } from "../../components/pagination/pagination";
+import { scrollToTop } from "../../util/scroll";
 
 export const Trending = () => {
   const [currentPage, setPage] = useState(1);
-
-  const { data, isLoading, isError } = useTrendingApi(currentPage);
+  const { data, isLoading } = compuseTrending(currentPage);
 
   const countPage = data?.total_pages;
-
   const trendingMovies = data?.results;
 
   const handlePageClick = (page) => {
     setPage(page);
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    scrollToTop();
   };
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    scrollToTop();
   }, []);
 
   if (isLoading) {

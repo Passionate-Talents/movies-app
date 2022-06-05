@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import { Header } from "./Componnets/header/Header";
+import { Header } from "./components/header/Header";
 import { Trending } from "./pages/trending/Trending";
-import { Footer } from "./Componnets/footer/footer";
+import { Footer } from "./components/footer/footer";
 import { Movies } from "./pages/movies/movies";
 import { Series } from "./pages/series/series";
 
