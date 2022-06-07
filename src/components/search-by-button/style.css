@@ -1,0 +1,30 @@
+.btn {
+    padding: 12px 12px 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ffffffb3;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all .2s ease-in;
+}
+
+.btn.active {
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    animation: background-color .9s ease-in-out;
+}
+
+@keyframes background-color {
+    0% {
+        background-color: #ffffff34;
+    }
+    50% {
+        background-color: #ffffffb3;
+    }
+    100% {
+        background-color: transparent
+    }
+}
