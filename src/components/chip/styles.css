@@ -11,15 +11,15 @@
     gap: 4px;
 }
 
-.hide-delete {
+.hide {
     display: none;
 }
 
-.delete {
+.flex {
     display: flex;
 }
 
-.delete:hover {
+.flex:hover {
     display: flex;
 }
 
@@ -43,6 +43,7 @@
 .icon-delete {
     color: #C9CBCB;
     font-size: 20px;
+    display: block;
 }
 
 .icon-delete:hover {
