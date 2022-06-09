@@ -33,6 +33,6 @@ body {
 .button-container {
     display: flex;
     gap: 6px;
-    padding: 10px 50px 0;
+    padding: 10px 16px 16px 22px;
     flex-wrap: wrap;
 }
