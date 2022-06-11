@@ -8,7 +8,7 @@ import { Actor } from "../actor/actor";
 import "./movie-info.css";
 
 export const MovieInfo = ({ id, mediaType }) => {
-  const { data: movieInfo } = useMovieInfo(mediaType, id);
+  const { data: movieInfo, isLoading } = useMovieInfo(mediaType, id);
   const { data: movieTrailer } = useMovieTrailer(mediaType, id);
   const { data: actorsImages } = useActorsImages(mediaType, id);
   const [windowWidth, setWindowWidth] = useState(0);
@@ -38,6 +38,10 @@ export const MovieInfo = ({ id, mediaType }) => {
   const handlePropagation = (event) => {
     event.stopPropagation();
   };
+
+  if (isLoading) {
+    return <h1 className="container">loading....</h1>;
+  }
 
   return (
     <div className="movie-info" onClick={handlePropagation}>
