@@ -40,12 +40,13 @@ export const Movies = () => {
           data.data.results.map((movie) => (
             <MovieCard
               key={movie.id}
-              mediaType={movie.media_type}
+              mediaType="movie"
               releaseDate={movie.release_date}
               posterPath={movie.poster_path}
               voteAverage={movie.vote_average}
               name={movie.name}
               title={movie.title}
+              id={movie.id}
             />
           ))}
       </div>
